@@ -1,0 +1,293 @@
+html {
+	overflow-x: hidden;
+}
+body {
+	background-color: #3c225f;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Lora', serif;
+}
+
+a {
+	color: #00bcd4;
+}
+a:hover,
+a:focus {
+	color: #00ACC1;
+}
+a.btn {
+	background-color: #00bcd4;
+	color: #fff;
+	text-shadow: none;
+	border: 0;
+}
+a.btn:hover,
+a.btn:focus,
+a.btn:active,
+a.btn:visited {
+	color: #fff !important;
+	background-color: #00ACC1 !important;
+}
+
+.intro {
+	text-align: center;
+	color: #fff;
+}
+	.page-title {
+		font-family: 'Chela One', cursive;
+		font-size: 52px;
+		text-align: center;
+		letter-spacing: 0.3px;
+		margin-top: 40px;
+	}
+	.intro-description {
+		padding-top: 20px;
+		width: 60%;
+		margin: auto;
+		font-size: 18px;
+		line-height: 28px;
+	}
+	.create-proposal {
+		margin: 20px 0;
+	}
+
+@media (max-width: 768px) {
+	.page-title {
+		font-size: 34px;
+	}
+	.intro-description {
+		width: 90%;
+		font-size: 16px;
+		line-height: 24px;
+		padding-top: 10px;
+	}
+}
+
+.thanksgiving-table {
+	margin-top: 200px;
+}
+	.table {
+		background-color: #FDF9DE;
+		padding-top: 30px;
+		padding-bottom: 100px;
+		position: relative;
+	}
+		.stripe {
+			background-color: #F5E8BC;
+			margin: 15px 0;
+		}
+		.stripe.lg {
+			height: 30px;
+		}
+		.stripe.md {
+			height: 22px;
+		}
+		.stripe.sm {
+			height: 15px;
+		}
+		.food {
+			position: absolute;
+			top: 0px;
+		}
+		.food.gravy {
+			top: -65px;
+			right: 30%;
+		}
+		.food.marshmellows {
+			top: -45px;
+			left: 15%;
+		}
+		.food.potatoes {
+			top: -93px;
+			right: 20%;
+		}
+		.food.pie {
+			top: -77px;
+			right: 5%;
+		}
+		.food.cranberry {
+			top: -93px;
+			left: 5%;
+		}
+		.food.turkey {
+			top: -145px;
+			left: calc(50% - 161px);
+		}
+		.food.wine {
+			top: -185px;
+			left: 30%;
+		}
+		@media (max-width: 768px) {
+			.food.wine {
+				left: 2%;
+			}
+			.food.pie {
+				right: 2%;
+			}
+		}
+
+.template-creator {
+	padding-top: 20px;
+	margin-top: 20px;
+	text-align: center;
+}
+	.how-to h3 {
+		font-family: 'Chela One', cursive;
+		font-size: 36px;
+		letter-spacing: 0.3px;
+	}
+	.how-to p {
+	    padding-top: 10px;
+	    width: 60%;
+	    margin: auto;
+	    font-size: 16px;
+	    line-height: 24px;
+	    padding-bottom: 20px;
+	}
+	.template-options {
+		margin: 20px 0 10px;
+	}
+	.template-options-select {
+		width: auto;
+		margin: 20px auto 10px;
+	}
+		.template-options .template-option {
+			color: #00bcd4;
+			font-weight: bold;
+		}
+		.template-options .template-option.active,
+		.template-options .template-option:hover,
+		.template-options .template-option:active,
+		.template-options .template-option:focus {
+			background-color: #00bcd4;
+			color: #fff;
+			text-shadow: none;
+			border-color: #00bcd4;
+		}
+		@media (max-width: 768px) {
+			.template-options .template-option {
+				font-size: 12px;
+				padding: 4px 6px;
+			}
+		}
+	.proposal-container {
+		width: 50%;
+		margin: auto;
+		margin-top: 10px;
+	}
+		.proposal {
+			background-color: #fff;
+			padding: 5%;
+			box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+		}
+			.proposal-text {
+				font-family: 'Lora', serif;
+				font-style: italic;
+				font-size: 22px;
+				margin-bottom: 0;
+				color: #333;
+			}
+	.send-proposal {
+		margin: 20px 0;
+	}
+
+@media (max-width: 768px) {
+
+	.how-to h3 {
+		font-size: 34px;
+	}
+	.how-to p {
+		width: 90%;
+		font-size: 16px;
+		line-height: 24px;
+		padding-top: 10px;
+	}
+
+
+
+	.proposal-container {
+		width: 90%;
+	}
+		.proposal {
+			padding: 2%;
+		}
+			.proposal-text {
+				font-size: 16px;
+			}
+}
+
+.social {
+	text-align: center;
+	color: #fff;
+}
+	.social-buttons {
+		margin: 20px 0 40px;
+	}
+	.social-buttons a:hover,
+	.social-buttons a:focus {
+		text-decoration: none;
+	}
+		.social-buttons .icon {
+			font-size: 26px;
+			margin: 0 5px;
+		}
+	.created-by {
+		font-size: 12px;
+	}
+
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?inb0v');
+  src:  url('fonts/icomoon.eot?inb0v#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?inb0v') format('truetype'),
+    url('../fonts/icomoon.woff?inb0v') format('woff'),
+    url('../fonts/icomoon.svg?inb0v#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
