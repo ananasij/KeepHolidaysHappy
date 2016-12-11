@@ -245,7 +245,7 @@
         "radix": "error",
 
         // requires to declare all vars on top of their containing scope
-        "vars-on-top": "error",
+        // "vars-on-top": "error",
 
         // require immediate function invocation to be wrapped in parentheses
         // http://eslint.org/docs/rules/wrap-iife.html
@@ -794,6 +794,7 @@
         "curly": ["error", "all"],
         "no-use-before-define": ["error", { "functions": false, "classes": true }],
         "quote-props": ["error", "consistent-as-needed", { "keywords": false, "unnecessary": true, "numbers": false }],
-        "space-before-function-paren": ["error", "never"]
+        "space-before-function-paren": ["error", "never"],
+        "vars-on-top": "off"
     }
 }
