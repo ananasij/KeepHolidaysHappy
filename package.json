@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.15"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.0"
+  }
+}
