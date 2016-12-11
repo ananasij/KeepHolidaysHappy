@@ -19,9 +19,15 @@
     <link href="https://fonts.googleapis.com/css?family=Chela+One|Lora|Roboto" rel="stylesheet">
 
     <!-- Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <script>
+        var require = {
+            baseUrl : '/js',
+            paths: {
+                jquery: 'lib/jquery.min'
+            }
+        };
+    </script>
+    <script data-main="{{jsModule}}" src="/js/lib/require.min.js"></script>
 
     <!-- Facebook -->
     <meta property="og:image" content="http://keepholidayshappy.com/imgs/thumbnail.png" />
