@@ -52,11 +52,12 @@
                     After selecting a proposal template, you can edit and send the proposal to your friends and family
                     using Google Forms.</p>
             </div>
-            <div class="btn-group template-options hidden-xs" role="group" aria-label="...">
-                <button type="button" class="btn btn-default template-option active" id="template-1">No Trump at My Table</button>
-                <button type="button" class="btn btn-default template-option" id="template-2">No Need for World War 3</button>
-                <button type="button" class="btn btn-default template-option" id="template-3">Keep Your Feelings on Lock</button>
-                <button type="button" class="btn btn-default template-option" id="template-4">Talk About Yourself Instead</button>
+            <div class="btn-group template-options js-template-options hidden-xs">
+                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-1">No Trump at My Table</button>
+                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-2">No Need for World War 3</button>
+                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-3">Keep Your Feelings on Lock</button>
+                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-4">Talk About Yourself Instead</button>
+                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-0">Write your own proposal</button>
 
             </div>
 
@@ -65,21 +66,12 @@
                 <option value="template-2">No Need for World War 3</option>
                 <option value="template-3">Keep Your Feelings on Lock</option>
                 <option value="template-4">Talk About Yourself Instead</option>
+                <option value="template-0">Write your own proposal</option>
             </select>
 
             <div class="proposal-container">
                 <div class="proposal">
-                    <p class="proposal-text">
-                        Our cranberry sauce is red <br />
-                        And our fat turkey is brown <br />
-                        No politics at dinner, <br />
-                        I want all smiles, no frowns<br /><br />
-
-                        The pilgrims and the indians <br />
-                        Had a nice holiday meal <br />
-                        Don’t talk trump at my table <br />
-                        Or shit is going to get real
-                    </p>
+                    <textarea class="proposal-text js-proposal-textarea" rows="10"></textarea>
                 </div>
             </div>
 

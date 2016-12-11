@@ -190,6 +190,15 @@ a.btn:visited {
 				font-size: 22px;
 				margin-bottom: 0;
 				color: #333;
+
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+
+				width: 100%;
+				resize: none;
+				border: 0;
+				text-align: center;
 			}
 	.send-proposal {
 		margin: 20px 0;
@@ -273,21 +282,3 @@ a.btn:visited {
 .icon-twitter:before {
   content: "\ea96";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
