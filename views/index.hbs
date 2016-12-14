@@ -44,20 +44,19 @@
 
         </div>
 
-        <div class="template-creator">
+        <!--SELECT TEMPLATE-->
+        <div class="proposal-creator js-template-selection">
 
             <div class="how-to">
                 <h3> Choose your proposal </h3>
                 <p> Select a proposal below that you think will get through to your friends and family.
-                    After selecting a proposal template, you can edit and send the proposal to your friends and family
-                    using Google Forms.</p>
+                    After selecting a proposal template, you can edit and send the proposal to your friends and family.</p>
             </div>
             <div class="btn-group template-options js-template-options hidden-xs">
                 <button type="button" class="btn btn-default template-option js-template-option" data-template="template-1">No Trump at My Table</button>
                 <button type="button" class="btn btn-default template-option js-template-option" data-template="template-2">No Need for World War 3</button>
                 <button type="button" class="btn btn-default template-option js-template-option" data-template="template-3">Keep Your Feelings on Lock</button>
                 <button type="button" class="btn btn-default template-option js-template-option" data-template="template-4">Talk About Yourself Instead</button>
-                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-0">Write your own proposal</button>
 
             </div>
 
@@ -66,19 +65,157 @@
                 <option value="template-2">No Need for World War 3</option>
                 <option value="template-3">Keep Your Feelings on Lock</option>
                 <option value="template-4">Talk About Yourself Instead</option>
-                <option value="template-0">Write your own proposal</option>
             </select>
 
             <div class="proposal-container">
                 <div class="proposal">
-                    <textarea class="proposal-text js-proposal-textarea" rows="10"></textarea>
+                    <textarea class="proposal-text js-proposal-textarea" rows="11"></textarea>
                 </div>
             </div>
 
-            <a class="btn btn-default btn-lg send-proposal" target="_blank"
-               href="https://docs.google.com/forms/d/1bFd7-joDVFn5tuTBQRCb2o7Xa4P1SN6zsG35VJweWZs/copy">
+            <a class="btn btn-default btn-lg send-proposal" href="#">
                 Select proposal
             </a>
+        </div>
+
+        <div class="separator"></div>
+
+        <!--CUSTOMISE ANSWER OPTIONS-->
+        <div class="proposal-creator js-answer-options-edit">
+
+            <div class="how-to">
+                <h3> Customise it </h3>
+                <p> That's how it will look to your friends. You can also choose what they can answer </p>
+            </div>
+            <div class="proposal-container">
+                <div class="proposal">
+                    <p class="proposal-text js-proposal-textarea">
+                        Here goes the proposal from the 1st section. <br /><br />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam suscipit massa. Sed
+                        rhoncus leo in arcu ullamcorper, tempus pellentesque arcu finibus. Phasellus quis augue sed
+                        metus mollis egestas. Vestibulum bibendum eros et orci pharetra interdum. Nam porttitor leo ut
+                        ex gravida porta. Fusce ultrices, purus et blandit hendrerit, purus sem consequat quam, non
+                        ornare sem purus sit amet lorem. Aenean rhoncus, odio id ullamcorper euismod, nisi ex tincidunt
+                        ligula, quis rutrum eros sem a neque. Ut sollicitudin vel leo sit amet rutrum.
+                    </p>
+                </div>
+            </div>
+            <div class="template-options js-template-options hidden-xs">
+                <button type="button" class="btn btn-default template-option js-XXX" data-template="template-1">
+                    Yep! Sounds good to me
+                </button>
+                <button type="button" class="btn btn-default template-option js-XXX" data-template="template-2">
+                    I can't promise anything
+                </button>
+                <button type="button" class="btn btn-default template-option js-XXX" data-template="template-3">
+                    Nope, let the games begin!
+                </button>
+
+            </div>
+
+            <div class="input-container js-buttons-input ">
+                <h3>Edit answer options</h3>
+                <div class="row answer-option-input">
+                    <div class="col-sm-3">
+                    <label class="control-label" for="btnAgree">"I agree" button: </label>
+                </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="btnAgree" value="Yep! Sounds good to me">
+                    </div>
+                </div>
+                <div class="row answer-option-input">
+                    <div class="col-sm-3">
+                        <label class="control-label" for="btnDontknow">"I don't know" button: </label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="btnDontknow" value="I can't promise anything">
+                    </div>
+                </div>
+                <div class="row answer-option-input">
+                    <div class="col-sm-3">
+                        <label class="control-label" for="btnDisagree">"I disagree" button: </label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="btnDisagree" value="Nope, let the games begin!">
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn-default btn-lg send-proposal" href="#">
+                Add members
+            </a>
+        </div>
+
+        <div class="separator"></div>
+
+        <!--ADD MEMBERS-->
+        <div class="proposal-creator js-emails-input">
+
+            <div class="how-to">
+                <h3> Add members </h3>
+                <p> Put your email and name and emails of your victims </p>
+            </div>
+            <div class="input-container ">
+                <div class="row answer-option-input">
+                    <div class="col-sm-3">
+                        <label class="control-label" for="senderName">Your name </label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="senderName" placeholder="That's how your proposal will be signed">
+                    </div>
+                </div>
+                <div class="row answer-option-input">
+                    <div class="col-sm-3">
+                        <label class="control-label" for="senderEmail">Your email </label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="senderEmail" placeholder="Answers to the proposals will be sent here">
+                    </div>
+                </div>
+                <h3>Send it to</h3>
+                <div class="row answer-option-input">
+                    <div class="emails-list">
+                        <span class="label label-email">mom@example.com  <a><i class="icon-cross icon"></i></a></span>
+                        <span class="label label-email">dad@example.com  <a><i class="icon-cross icon"></i></a></span>
+                        <span class="label label-email">grandma@example.com  <a><i class="icon-cross icon"></i></a></span>
+                        <span class="label label-email">grandpa@example.com  <a><i class="icon-cross icon"></i></a></span>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" >
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-default btn-add js-XXX" data-template="template-1">
+                            Add email
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="https://sophosnews.files.wordpress.com/2014/12/recaptcha_anchor2x.jpg?w=640" height="70px"/>
+                </div>
+            </div>
+
+
+            <a class="btn btn-default btn-lg send-proposal" href="#">
+                Send emails
+            </a>
+        </div>
+
+        <div class="separator"></div>
+
+        <!--SUCCESS PAGE-->
+        <div class="proposal-creator js-proposal-created">
+
+            <div class="how-to">
+                <h3> Successfully sent! </h3>
+                <p> Your friends and family got your proposal. Follow the link below to see what they are answering.
+                    We've also sent this link to your email.</p>
+                <p></p><p></p>
+                <p>Your tracking link:
+                    <a href="#">keepholidayshappy.com/ghc34kgh345hg35h3g45k23g45k2hg45k2g45f2k5f</a></p>
+                <p></p><p></p>
+            </div>
+
         </div>
     {{/content}}
 {{/extend}}
