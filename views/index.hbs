@@ -44,8 +44,9 @@
 
         </div>
 
+        <div class="proposal-creator centered">
         <!--SELECT TEMPLATE-->
-        <div class="proposal-creator js-template-selection">
+        <div class=" js-template-selection creator-step">
 
             <div class="how-to">
                 <h3> Choose your proposal </h3>
@@ -73,15 +74,14 @@
                 </div>
             </div>
 
-            <a class="btn btn-default btn-lg send-proposal" href="#">
+            <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-answer-options-edit">
                 Select proposal
-            </a>
+            </button>
         </div>
 
-        <div class="separator"></div>
 
         <!--CUSTOMISE ANSWER OPTIONS-->
-        <div class="proposal-creator js-answer-options-edit">
+        <div class=" js-answer-options-edit creator-step hidden">
 
             <div class="how-to">
                 <h3> Customise it </h3>
@@ -141,15 +141,14 @@
                 </div>
             </div>
 
-            <a class="btn btn-default btn-lg send-proposal" href="#">
+            <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-emails-input">
                 Add members
-            </a>
+            </button>
         </div>
 
-        <div class="separator"></div>
 
         <!--ADD MEMBERS-->
-        <div class="proposal-creator js-emails-input">
+        <div class=" js-emails-input creator-step hidden">
 
             <div class="how-to">
                 <h3> Add members </h3>
@@ -196,15 +195,14 @@
             </div>
 
 
-            <a class="btn btn-default btn-lg send-proposal" href="#">
+            <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-proposal-created">
                 Send emails
-            </a>
+            </button>
         </div>
 
-        <div class="separator"></div>
 
         <!--SUCCESS PAGE-->
-        <div class="proposal-creator js-proposal-created">
+        <div class=" js-proposal-created creator-step hidden">
 
             <div class="how-to">
                 <h3> Successfully sent! </h3>
@@ -216,6 +214,7 @@
                 <p></p><p></p>
             </div>
 
+        </div>
         </div>
     {{/content}}
 {{/extend}}

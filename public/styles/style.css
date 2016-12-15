@@ -133,7 +133,12 @@ a.btn:visited {
 .proposal-creator {
 	padding-top: 20px;
 	margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 	text-align: center;
+	min-height:85vh;
+    position: relative;
+    width: 60%;
 }
 	.how-to h3 {
 		font-family: 'Chela One', cursive;
@@ -142,7 +147,6 @@ a.btn:visited {
 	}
 	.how-to p {
 	    padding-top: 10px;
-	    width: 60%;
 	    margin: auto;
 	    font-size: 16px;
 	    line-height: 24px;
@@ -175,7 +179,7 @@ a.btn:visited {
 			}
 		}
 	.proposal-container {
-		width: 50%;
+		width: 90%;
 		margin: auto;
 		margin-top: 10px;
 	}
@@ -200,9 +204,13 @@ a.btn:visited {
 				border: 0;
 				text-align: center;
 			}
-	.send-proposal {
-		margin: 20px 0;
-	}
+
+    .creator-step {
+        position: absolute;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 @media (max-width: 768px) {
 
@@ -297,7 +305,7 @@ a.btn:visited {
 }
 
 .input-container {
-    width: 50%;
+    width: 90%;
     margin: auto;
     margin-top: 50px;
     padding: 10px;
@@ -340,3 +348,19 @@ a.btn:visited {
     margin-bottom: 20px;
     padding: 10px;
 }
+
+button.submit-page {
+	background-color: #00bcd4;
+	color: #fff;
+	text-shadow: none;
+	border: 0;
+	margin: 20px 0;
+}
+
+	button.submit-page:hover,
+	button.submit-page:focus,
+	button.submit-page:active,
+	button.submit-page:visited {
+		color: #fff !important;
+		background-color: #00ACC1 !important;
+	}
