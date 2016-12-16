@@ -155,10 +155,6 @@ a.btn:visited {
 	.template-options {
 		margin: 20px 0 10px;
 	}
-	.template-options-select {
-		width: auto;
-		margin: 20px auto 10px;
-	}
 		.template-options .template-option {
 			color: #00bcd4;
 			font-weight: bold;

@@ -46,27 +46,20 @@
 
         <div class="proposal-creator centered">
         <!--SELECT TEMPLATE-->
-        <div class=" js-template-selection creator-step">
+        <div class="js-template-selection creator-step">
 
             <div class="how-to">
                 <h3> Choose your proposal </h3>
                 <p> Select a proposal below that you think will get through to your friends and family.
                     After selecting a proposal template, you can edit and send the proposal to your friends and family.</p>
             </div>
-            <div class="btn-group template-options js-template-options hidden-xs">
+            <div class="btn-group template-options js-template-options">
                 <button type="button" class="btn btn-default template-option js-template-option" data-template="template-1">No Trump at My Table</button>
                 <button type="button" class="btn btn-default template-option js-template-option" data-template="template-2">No Need for World War 3</button>
                 <button type="button" class="btn btn-default template-option js-template-option" data-template="template-3">Keep Your Feelings on Lock</button>
                 <button type="button" class="btn btn-default template-option js-template-option" data-template="template-4">Talk About Yourself Instead</button>
 
             </div>
-
-            <select class="btn btn-default form-control visible-xs template-options-select">
-                <option value="template-1">No Trump at My Table</option>
-                <option value="template-2">No Need for World War 3</option>
-                <option value="template-3">Keep Your Feelings on Lock</option>
-                <option value="template-4">Talk About Yourself Instead</option>
-            </select>
 
             <div class="proposal-container">
                 <div class="proposal">
@@ -100,14 +93,14 @@
                     </p>
                 </div>
             </div>
-            <div class="template-options js-template-options hidden-xs">
-                <button type="button" class="btn btn-default template-option js-XXX" data-template="template-1">
+            <div class=" template-options js-answer-options ">
+                <button type="button" class="btn btn-default template-option js-answer-option js-answer-agree" >
                     Yep! Sounds good to me
                 </button>
-                <button type="button" class="btn btn-default template-option js-XXX" data-template="template-2">
+                <button type="button" class="btn btn-default template-option js-answer-option js-answer-dontknow" >
                     I can't promise anything
                 </button>
-                <button type="button" class="btn btn-default template-option js-XXX" data-template="template-3">
+                <button type="button" class="btn btn-default template-option js-answer-option js-answer-disagree" >
                     Nope, let the games begin!
                 </button>
 
@@ -120,7 +113,8 @@
                     <label class="control-label" for="btnAgree">"I agree" button: </label>
                 </div>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="btnAgree" value="Yep! Sounds good to me">
+                        <input type="text" class="form-control js-answer-option-input" id="btnAgree"
+                               data-target-btn="js-answer-agree" value="Yep! Sounds good to me">
                     </div>
                 </div>
                 <div class="row answer-option-input">
@@ -128,7 +122,8 @@
                         <label class="control-label" for="btnDontknow">"I don't know" button: </label>
                     </div>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="btnDontknow" value="I can't promise anything">
+                        <input type="text" class="form-control js-answer-option-input" id="btnDontknow"
+                               data-target-btn="js-answer-dontknow" value="I can't promise anything">
                     </div>
                 </div>
                 <div class="row answer-option-input">
@@ -136,7 +131,8 @@
                         <label class="control-label" for="btnDisagree">"I disagree" button: </label>
                     </div>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="btnDisagree" value="Nope, let the games begin!">
+                        <input type="text" class="form-control js-answer-option-input" id="btnDisagree"
+                               data-target-btn="js-answer-disagree" value="Nope, let the games begin!">
                     </div>
                 </div>
             </div>

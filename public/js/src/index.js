@@ -10,14 +10,6 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
             $selectedOption.addClass('active');
         });
 
-
-        $('.template-options-select').on('change', function() {
-            var templateNum = $(this).val();
-            setProposal(templateNum);
-            // TODO When selecting an option here update the big selector state as well
-        });
-
-
         $('.create-proposal').on('click', function() {
             var target = $('.js-template-selection');
             $('html, body').animate({
@@ -31,6 +23,13 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
             if ($nextStep) {
                 switchStep($currentStep, $nextStep);
             }
+        });
+
+        $('.js-answer-option-input').on('input', function(event) {
+            var update = $(event.target).val();
+            var autocompleteTargetName = $(event.target).data('target-btn');
+            var $autocompleteTarget = $('.js-answer-options').find('.' + autocompleteTargetName);
+            $autocompleteTarget.text(update);
         });
 
         function setProposal(templateName) {
