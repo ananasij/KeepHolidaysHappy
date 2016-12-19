@@ -21,6 +21,7 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
             var $currentStep = $(event.target).parent();
             var $nextStep = $('.' + $(event.target).data('destination'));
             if ($nextStep) {
+                setDataForNextStep($(event.target).data('destination'));
                 switchStep($currentStep, $nextStep);
             }
         });
@@ -45,6 +46,21 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
             $next.css({ display: 'none' });
             $('.proposal-creator').css({ height: $next.height() });
             $next.show('slide', { direction: 'right' }, 'slow');
+        }
+
+        function setDataForNextStep(step) {
+            switch (step) {
+                case 'js-answer-options-edit' :
+                    setCustomisedProposal();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function setCustomisedProposal() {
+            var proposalText = $('.js-template-selection').find('.js-proposal-textarea').val();
+            $('.js-answer-options-edit').find('.js-proposal-textarea').html(proposalText);
         }
     });
 });

@@ -199,6 +199,7 @@ a.btn:visited {
 				resize: none;
 				border: 0;
 				text-align: center;
+				white-space: pre-wrap;
 			}
 
     .creator-step {
@@ -206,6 +207,7 @@ a.btn:visited {
         top: 0;
         margin-left: auto;
         margin-right: auto;
+		width: 100%;
     }
 
 @media (max-width: 768px) {
