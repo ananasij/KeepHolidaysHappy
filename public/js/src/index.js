@@ -30,6 +30,9 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
             var update = $(event.target).val();
             var autocompleteTargetName = $(event.target).data('target-btn');
             var $autocompleteTarget = $('.js-answer-options').find('.' + autocompleteTargetName);
+            if (update.trim() === '') {
+                update = $autocompleteTarget.data('default-value');
+            }
             $autocompleteTarget.text(update);
         });
 
