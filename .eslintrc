@@ -514,12 +514,13 @@
 
         // specify the maximum length of a line in your program
         // http://eslint.org/docs/rules/max-len
-        "max-len": ["error", 100, 2, {
+        /*"max-len": ["error", 100, 2, {
             "ignoreUrls": true,
             "ignoreComments": false,
             "ignoreStrings": true,
-            "ignoreTemplateLiterals": true
-        }],
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true
+        }],*/
 
         // specify the max number of lines in a file
         // http://eslint.org/docs/rules/max-lines
@@ -797,6 +798,13 @@
         "no-use-before-define": ["error", { "functions": false, "classes": true }],
         "quote-props": ["error", "consistent-as-needed", { "keywords": false, "unnecessary": true, "numbers": false }],
         "space-before-function-paren": ["error", "never"],
-        "vars-on-top": "off"
+        "vars-on-top": "off",
+        "max-len": ["error", 100, 2, {
+            "ignoreUrls": true,
+            "ignoreComments": false,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true
+        }]
     }
 }
