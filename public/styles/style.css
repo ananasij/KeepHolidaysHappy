@@ -18,6 +18,7 @@ a {
 a:hover,
 a:focus {
 	color: #00ACC1;
+    text-decoration: none;
 }
 a.btn {
 	background-color: #00bcd4;

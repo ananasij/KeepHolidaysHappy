@@ -97,8 +97,12 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
     function renderMember(email) {
         var member = $(document.createElement('span'));
         member.addClass('label label-email');
-        member.html(email + ' <a><i class="icon-cross icon"></i></a>');
+        member.html(email + ' <a><i class="icon-cross icon js-delete-icon"></i></a>');
         $('.js-members-list').append(member).append(' ');
+        $('.js-delete-icon').on('click', function(e) {
+            var $label = $(e.target).parent().parent();
+            $label.remove();
+        });
     }
 
     function validateEmail(email) {
