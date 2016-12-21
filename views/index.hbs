@@ -151,7 +151,8 @@
                         <label class="control-label" for="senderName">Your name </label>
                     </div>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="senderName" placeholder="That's how your proposal will be signed">
+                        <input type="text" class="form-control" id="senderName" autocomplete="name"
+                               placeholder="That's how your proposal will be signed">
                     </div>
                 </div>
                 <div class="row answer-option-input">
@@ -159,25 +160,24 @@
                         <label class="control-label" for="senderEmail">Your email </label>
                     </div>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="senderEmail" placeholder="Answers to the proposals will be sent here">
+                        <input type="email" class="form-control" id="senderEmail" autocomplete="email"
+                               placeholder="Answers to the proposals will be sent here">
                     </div>
                 </div>
                 <h3>Send it to</h3>
                 <div class="row answer-option-input">
-                    <div class="emails-list">
-                        <span class="label label-email">mom@example.com  <a><i class="icon-cross icon"></i></a></span>
-                        <span class="label label-email">dad@example.com  <a><i class="icon-cross icon"></i></a></span>
-                        <span class="label label-email">grandma@example.com  <a><i class="icon-cross icon"></i></a></span>
-                        <span class="label label-email">grandpa@example.com  <a><i class="icon-cross icon"></i></a></span>
-                    </div>
+                    <div class="members-list js-members-list"></div>
 
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" >
-                    </div>
-                    <div class="col-sm-3">
-                        <button type="button" class="btn btn-default btn-add js-XXX" data-template="template-1">
-                            Add email
-                        </button>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control js-member-input" >
+                            <p class="validation-message invisible js-email-validation-error">Please enter a valid email address: email@example.com</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="button" class="btn btn-default btn-add js-add-member-btn" data-template="template-1">
+                                Add email
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
