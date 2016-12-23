@@ -20,10 +20,12 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
 
         $('.js-submit-page').on('click', function(event) {
             var $currentStep = $(event.target).parent();
-            var $nextStep = $('.' + $(event.target).data('destination'));
-            if ($nextStep) {
-                setDataForNextStep($(event.target).data('destination'));
-                switchStep($currentStep, $nextStep);
+            if(validateRequiredFields($currentStep)) {
+                var $nextStep = $('.' + $(event.target).data('destination'));
+                if ($nextStep) {
+                    setDataForNextStep($(event.target).data('destination'));
+                    switchStep($currentStep, $nextStep);
+                }
             }
         });
 
@@ -37,12 +39,22 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
             $autocompleteTarget.text(update);
         });
 
+        $('.js-sender-email-input').on('focusout', function() {
+            if (!validateEmail($(this).val())) {
+                $('.js-sender-email-input-container').find('.js-email-validation-error').removeClass('invisible');
+            }
+        });
+
+        $('.js-sender-email-input').on('keyup', function() {
+            $('.js-sender-email-input-container').find('.js-email-validation-error').addClass('invisible');
+        });
+
         $('.js-add-member-btn').on('click', function() {
             addMember();
         });
 
         $('.js-member-input').on('keyup', function(e) {
-            $('.js-email-validation-error').addClass('invisible');
+            $('.js-member-input-container').find('.js-email-validation-error').addClass('invisible');
             if (e.keyCode === 13) {
                 addMember();
             }
@@ -90,7 +102,7 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
             renderMember($email.val());
             $email.val('');
         } else {
-            $('.js-email-validation-error').removeClass('invisible');
+            $('.js-member-input-container').find('.js-email-validation-error').removeClass('invisible');
         }
     }
 
@@ -107,6 +119,46 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
 
     function validateEmail(email) {
         return emailValidator.test(email);
+    }
+
+    function validateRequiredFields($currentStep) {
+        var requiredFields = $currentStep.find('.js-required');
+        var emptyFields = checkEmptyFields(requiredFields);
+        var $submitValidationError = $('.js-submit-validation-error');
+        $submitValidationError.text('').addClass('invisible');
+        if (emptyFields) {
+            var errorMessage = getEmptyFieldsErrorMessage(emptyFields);
+            $submitValidationError.text(errorMessage).removeClass('invisible');
+            return false;
+        }
+        return true;
+    }
+
+    function checkEmptyFields(fields) {
+        var fieldsNumber = fields.length;
+        var emptyFields = [];
+        for (var i = 0; i < fieldsNumber; i++) {
+            var $field = $(fields[i]);
+            if (!$field.val().trim()) {
+                emptyFields.push($field.data('name-for-validation'));
+            }
+        }
+        if (emptyFields.length) {
+            return emptyFields;
+        }
+        return false;
+    }
+
+    function getEmptyFieldsErrorMessage(fields) {
+        var message = 'Please fill the required fields in: ';
+        fields.forEach(function(field, position) {
+            if (position === 0) {
+                message += field;
+            } else {
+                message += ', ' + field;
+            }
+        });
+        return message;
     }
 
     $(document).ready(init);

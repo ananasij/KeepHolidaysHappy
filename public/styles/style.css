@@ -137,7 +137,6 @@ a.btn:visited {
     margin-left: auto;
     margin-right: auto;
 	text-align: center;
-	min-height:85vh;
     position: relative;
     width: 60%;
 }
@@ -374,4 +373,12 @@ button.submit-page {
 
 .invisible {
     visibility: hidden;
+}
+
+.submit-validation-message-container {
+    padding-left: 22.5%;
+}
+
+.proposal-creator-wrap {
+    min-height:85vh;
 }

@@ -44,6 +44,7 @@
 
         </div>
 
+        <div class="proposal-creator-wrap">
         <div class="proposal-creator centered">
         <!--SELECT TEMPLATE-->
         <div class="js-template-selection creator-step">
@@ -63,7 +64,8 @@
 
             <div class="proposal-container">
                 <div class="proposal">
-                    <textarea class="proposal-text js-proposal-textarea" rows="11"></textarea>
+                    <textarea class="proposal-text js-proposal-textarea js-required" rows="11" data-name-for-validation="Proposal text">
+                    </textarea>
                 </div>
             </div>
 
@@ -151,17 +153,19 @@
                         <label class="control-label" for="senderName">Your name </label>
                     </div>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="senderName" autocomplete="name"
-                               placeholder="That's how your proposal will be signed">
+                        <input type="text" class="form-control js-required" id="senderName" autocomplete="name"
+                               placeholder="That's how your proposal will be signed" data-name-for-validation="Your name">
                     </div>
                 </div>
                 <div class="row answer-option-input">
                     <div class="col-sm-3">
                         <label class="control-label" for="senderEmail">Your email </label>
                     </div>
-                    <div class="col-sm-9">
-                        <input type="email" class="form-control" id="senderEmail" autocomplete="email"
-                               placeholder="Answers to the proposals will be sent here">
+                    <div class="col-sm-9 js-sender-email-input-container">
+                        <input type="email" class="form-control js-sender-email-input js-required" id="senderEmail"
+                               autocomplete="email" placeholder="Answers to the proposals will be sent here"
+                               data-name-for-validation="Your email">
+                        <p class="validation-message invisible js-email-validation-error">Please enter a valid email address: email@example.com</p>
                     </div>
                 </div>
                 <h3>Send it to</h3>
@@ -169,7 +173,7 @@
                     <div class="members-list js-members-list"></div>
 
                     <div class="row">
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 js-member-input-container">
                             <input type="email" class="form-control js-member-input" >
                             <p class="validation-message invisible js-email-validation-error">Please enter a valid email address: email@example.com</p>
                         </div>
@@ -204,7 +208,11 @@
                     <a href="#">keepholidayshappy.com/ghc34kgh345hg35h3g45k23g45k2hg45k2g45f2k5f</a></p>
                 <p></p><p></p>
             </div>
+        </div>
+        </div>
 
+        <div class="submit-validation-message-container">
+            <p class="center-block invisible validation-message js-submit-validation-error"></p>
         </div>
         </div>
     {{/content}}
