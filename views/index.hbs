@@ -45,175 +45,175 @@
         </div>
 
         <div class="proposal-creator-wrap">
-        <div class="proposal-creator centered">
-        <!--SELECT TEMPLATE-->
-        <div class="js-template-selection creator-step">
+            <div class="proposal-creator centered">
+            <!--SELECT TEMPLATE-->
+            <div class="js-template-selection creator-step">
 
-            <div class="how-to">
-                <h3> Choose your proposal </h3>
-                <p> Select a proposal below that you think will get through to your friends and family.
-                    After selecting a proposal template, you can edit and send the proposal to your friends and family.</p>
-            </div>
-            <div class="btn-group template-options js-template-options">
-                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-1">No Trump at My Table</button>
-                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-2">No Need for World War 3</button>
-                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-3">Keep Your Feelings on Lock</button>
-                <button type="button" class="btn btn-default template-option js-template-option" data-template="template-4">Talk About Yourself Instead</button>
-
-            </div>
-
-            <div class="proposal-container">
-                <div class="proposal">
-                    <textarea class="proposal-text js-proposal-textarea js-required" rows="11" data-name-for-validation="Proposal text">
-                    </textarea>
+                <div class="how-to">
+                    <h3> Choose your proposal </h3>
+                    <p> Select a proposal below that you think will get through to your friends and family.
+                        After selecting a proposal template, you can edit and send the proposal to your friends and family.</p>
                 </div>
-            </div>
+                <div class="btn-group template-options js-template-options">
+                    <button type="button" class="btn btn-default template-option js-template-option" data-template="template-1">No Trump at My Table</button>
+                    <button type="button" class="btn btn-default template-option js-template-option" data-template="template-2">No Need for World War 3</button>
+                    <button type="button" class="btn btn-default template-option js-template-option" data-template="template-3">Keep Your Feelings on Lock</button>
+                    <button type="button" class="btn btn-default template-option js-template-option" data-template="template-4">Talk About Yourself Instead</button>
 
-            <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-answer-options-edit">
-                Select proposal
-            </button>
-        </div>
-
-
-        <!--CUSTOMISE ANSWER OPTIONS-->
-        <div class=" js-answer-options-edit creator-step hidden">
-
-            <div class="how-to">
-                <h3> Customise it </h3>
-                <p> That's how it will look to your friends. You can also choose what they can answer </p>
-            </div>
-            <div class="proposal-container">
-                <div class="proposal">
-                    <p class="proposal-text js-proposal-textarea" > </p>
                 </div>
-            </div>
-            <div class=" template-options js-answer-options ">
-                <button type="button" class="btn btn-default template-option js-answer-option js-answer-agree"
-                        data-default-value="Yep! Sounds good to me" >
-                    Yep! Sounds good to me
+
+                <div class="proposal-container">
+                    <div class="proposal">
+                        <textarea class="proposal-text js-proposal-textarea js-required" rows="11" data-name-for-validation="Proposal text">
+                        </textarea>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-answer-options-edit">
+                    Select proposal
                 </button>
-                <button type="button" class="btn btn-default template-option js-answer-option js-answer-dontknow"
-                        data-default-value="I can't promise anything" >
-                    I can't promise anything
+            </div>
+
+
+            <!--CUSTOMISE ANSWER OPTIONS-->
+            <div class=" js-answer-options-edit creator-step hidden">
+
+                <div class="how-to">
+                    <h3> Customise it </h3>
+                    <p> That's how it will look to your friends. You can also choose what they can answer </p>
+                </div>
+                <div class="proposal-container">
+                    <div class="proposal">
+                        <p class="proposal-text js-proposal-textarea" > </p>
+                    </div>
+                </div>
+                <div class=" template-options js-answer-options ">
+                    <button type="button" class="btn btn-default template-option js-answer-option js-answer-agree"
+                            data-default-value="Yep! Sounds good to me" >
+                        Yep! Sounds good to me
+                    </button>
+                    <button type="button" class="btn btn-default template-option js-answer-option js-answer-dontknow"
+                            data-default-value="I can't promise anything" >
+                        I can't promise anything
+                    </button>
+                    <button type="button" class="btn btn-default template-option js-answer-option js-answer-disagree"
+                            data-default-value="Nope, let the games begin!" >
+                        Nope, let the games begin!
+                    </button>
+
+                </div>
+
+                <div class="input-container js-buttons-input ">
+                    <h3>Edit answer options</h3>
+                    <div class="row answer-option-input">
+                        <div class="col-sm-3">
+                        <label class="control-label" for="btnAgree">"I agree" button: </label>
+                    </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control js-answer-option-input" id="btnAgree"
+                                   data-target-btn="js-answer-agree" value="">
+                        </div>
+                    </div>
+                    <div class="row answer-option-input">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="btnDontknow">"I don't know" button: </label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control js-answer-option-input" id="btnDontknow"
+                                   data-target-btn="js-answer-dontknow" value="">
+                        </div>
+                    </div>
+                    <div class="row answer-option-input">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="btnDisagree">"I disagree" button: </label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control js-answer-option-input" id="btnDisagree"
+                                   data-target-btn="js-answer-disagree" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-emails-input">
+                    Add members
                 </button>
-                <button type="button" class="btn btn-default template-option js-answer-option js-answer-disagree"
-                        data-default-value="Nope, let the games begin!" >
-                    Nope, let the games begin!
-                </button>
-
             </div>
 
-            <div class="input-container js-buttons-input ">
-                <h3>Edit answer options</h3>
-                <div class="row answer-option-input">
-                    <div class="col-sm-3">
-                    <label class="control-label" for="btnAgree">"I agree" button: </label>
-                </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control js-answer-option-input" id="btnAgree"
-                               data-target-btn="js-answer-agree" value="">
-                    </div>
-                </div>
-                <div class="row answer-option-input">
-                    <div class="col-sm-3">
-                        <label class="control-label" for="btnDontknow">"I don't know" button: </label>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control js-answer-option-input" id="btnDontknow"
-                               data-target-btn="js-answer-dontknow" value="">
-                    </div>
-                </div>
-                <div class="row answer-option-input">
-                    <div class="col-sm-3">
-                        <label class="control-label" for="btnDisagree">"I disagree" button: </label>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control js-answer-option-input" id="btnDisagree"
-                               data-target-btn="js-answer-disagree" value="">
-                    </div>
-                </div>
-            </div>
 
-            <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-emails-input">
-                Add members
-            </button>
-        </div>
+            <!--ADD MEMBERS-->
+            <div class=" js-emails-input creator-step hidden">
 
-
-        <!--ADD MEMBERS-->
-        <div class=" js-emails-input creator-step hidden">
-
-            <div class="how-to">
-                <h3> Add members </h3>
-                <p> Put your email and name and emails of your victims </p>
-            </div>
-            <div class="input-container ">
-                <div class="row answer-option-input">
-                    <div class="col-sm-3">
-                        <label class="control-label" for="senderName">Your name </label>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control js-required" id="senderName" autocomplete="name"
-                               placeholder="That's how your proposal will be signed" data-name-for-validation="Your name">
-                    </div>
+                <div class="how-to">
+                    <h3> Add members </h3>
+                    <p> Put your email and name and emails of your victims </p>
                 </div>
-                <div class="row answer-option-input">
-                    <div class="col-sm-3">
-                        <label class="control-label" for="senderEmail">Your email </label>
+                <div class="input-container ">
+                    <div class="row answer-option-input">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="senderName">Your name </label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control js-required js-sender-name-input" id="senderName" autocomplete="name"
+                                   placeholder="That's how your proposal will be signed" data-name-for-validation="Your name">
+                        </div>
                     </div>
-                    <div class="col-sm-9 js-sender-email-input-container">
-                        <input type="email" class="form-control js-sender-email-input js-required" id="senderEmail"
-                               autocomplete="email" placeholder="Answers to the proposals will be sent here"
-                               data-name-for-validation="Your email">
-                        <p class="validation-message invisible js-email-validation-error">Please enter a valid email address: email@example.com</p>
-                    </div>
-                </div>
-                <h3>Send it to</h3>
-                <div class="row answer-option-input">
-                    <div class="members-list js-members-list"></div>
-
-                    <div class="row">
-                        <div class="col-sm-9 js-member-input-container">
-                            <input type="email" class="form-control js-member-input" >
+                    <div class="row answer-option-input">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="senderEmail">Your email </label>
+                        </div>
+                        <div class="col-sm-9 js-sender-email-input-container">
+                            <input type="email" class="form-control js-sender-email-input js-required" id="senderEmail"
+                                   autocomplete="email" placeholder="Answers to the proposals will be sent here"
+                                   data-name-for-validation="Your email">
                             <p class="validation-message invisible js-email-validation-error">Please enter a valid email address: email@example.com</p>
                         </div>
-                        <div class="col-sm-3">
-                            <button type="button" class="btn btn-default btn-add js-add-member-btn" data-template="template-1">
-                                Add email
-                            </button>
+                    </div>
+                    <h3>Send it to</h3>
+                    <div class="row answer-option-input">
+                        <div class="members-list js-members-list"></div>
+
+                        <div class="row">
+                            <div class="col-sm-9 js-member-input-container">
+                                <input type="email" class="form-control js-member-input" >
+                                <p class="validation-message invisible js-email-validation-error">Please enter a valid email address: email@example.com</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button type="button" class="btn btn-default btn-add js-add-member-btn" data-template="template-1">
+                                    Add email
+                                </button>
+                            </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <img src="https://sophosnews.files.wordpress.com/2014/12/recaptcha_anchor2x.jpg?w=640" height="70px"/>
+                    </div>
                 </div>
-                <div class="row">
-                    <img src="https://sophosnews.files.wordpress.com/2014/12/recaptcha_anchor2x.jpg?w=640" height="70px"/>
-                </div>
+
+
+                <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-proposal-created">
+                    Send emails
+                </button>
             </div>
 
 
-            <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-proposal-created">
-                Send emails
-            </button>
-        </div>
+            <!--SUCCESS PAGE-->
+            <div class=" js-proposal-created creator-step hidden">
 
-
-        <!--SUCCESS PAGE-->
-        <div class=" js-proposal-created creator-step hidden">
-
-            <div class="how-to">
-                <h3> Successfully sent! </h3>
-                <p> Your friends and family got your proposal. Follow the link below to see what they are answering.
-                    We've also sent this link to your email.</p>
-                <p></p><p></p>
-                <p>Your tracking link:
-                    <a href="#">keepholidayshappy.com/ghc34kgh345hg35h3g45k23g45k2hg45k2g45f2k5f</a></p>
-                <p></p><p></p>
+                <div class="how-to">
+                    <h3> Successfully sent! </h3>
+                    <p> Your friends and family got your proposal. Follow the link below to see what they are answering.
+                        We've also sent this link to your email.</p>
+                    <p></p><p></p>
+                    <p>Your tracking link:
+                        <a href="#">keepholidayshappy.com/ghc34kgh345hg35h3g45k23g45k2hg45k2g45f2k5f</a></p>
+                    <p></p><p></p>
+                </div>
             </div>
-        </div>
-        </div>
+            </div>
 
-        <div class="submit-validation-message-container">
-            <p class="center-block invisible validation-message js-submit-validation-error"></p>
-        </div>
+            <div class="submit-validation-message-container">
+                <p class="center-block invisible validation-message js-submit-validation-error"></p>
+            </div>
         </div>
     {{/content}}
 {{/extend}}

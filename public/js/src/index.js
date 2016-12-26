@@ -1,6 +1,15 @@
 define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
     // eslint-disable-next-line no-useless-escape
     var emailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var proposalData = {
+        senderName: '',
+        senderEmail: '',
+        proposalText: '',
+        agreeBtn: '',
+        dontknowBtn: '',
+        disagreeBtn: '',
+        emails: []
+    };
 
     function bindEvents() {
         $('.js-template-options').on('click', '.js-template-option', function(event) {
@@ -100,6 +109,7 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
         var $email = $('.js-member-input');
         if (validateEmail($email.val())) {
             renderMember($email.val());
+            proposalData.emails.push($email.val());
             $email.val('');
         } else {
             $('.js-member-input-container').find('.js-email-validation-error').removeClass('invisible');
@@ -159,6 +169,15 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
             }
         });
         return message;
+    }
+
+    function collectProposalData() {
+        proposalData.senderName = $('.js-sender-name-input').val();
+        proposalData.senderEmail = $('.js-sender-email-input').val();
+        proposalData.proposalText = $('.js-proposal-textarea').val();
+        proposalData.agreeBtn = $('.js-answer-agree').val;
+        proposalData.dontknowBtn = $('.js-answer-dontknow').val;
+        proposalData.disagreeBtn = $('.js-answer-disagree').val;
     }
 
     $(document).ready(init);
