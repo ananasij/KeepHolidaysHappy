@@ -1,6 +1,16 @@
-define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
+define([
+    'jquery',
+    'jquery-ui',
+    'src/proposals',
+    'src/stepSwitcher',
+    'src/formData',
+    'src/steps/answerOptionsEdit',
+    'src/steps/emailsInput',
+    'src/steps/proposalCreated',
+    'src/steps/templateSelection'
+], function($, ui, proposals, stepSwitcher, formData, answerOptionsEdit, emailsInput, proposalCreated, templateSelection) {
     // eslint-disable-next-line no-useless-escape
-    var emailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    /*var emailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var proposalData = {
         senderName: '',
         senderEmail: '',
@@ -178,7 +188,24 @@ define(['jquery', 'jquery-ui', 'src/proposals'], function($, ui, proposals) {
         proposalData.agreeBtn = $('.js-answer-agree').val;
         proposalData.dontknowBtn = $('.js-answer-dontknow').val;
         proposalData.disagreeBtn = $('.js-answer-disagree').val;
+    }*/
+
+    function init() {
+        var steps = [
+            templateSelection,
+            answerOptionsEdit,
+            emailsInput,
+            proposalCreated
+        ];
+
+        templateSelection.init($('.js-template-selection'), formData);
+        answerOptionsEdit.init($('.js-answer-options-edit'), formData);
+        emailsInput.init($('.js-emails-input'), formData);
+        proposalCreated.init($('.js-proposal-created'), formData);
+
+        stepSwitcher($('.js-steps'), steps);
     }
+
 
     $(document).ready(init);
 });
