@@ -38,6 +38,7 @@ define(['../validation'], function(validation) {
                 return;
             }
 
+            emails = collectEmails();
             formData.set({
                 senderName: $rootElement.find('.js-sender-name-input').val(),
                 senderEmail: $rootElement.find('.js-sender-email-input').val(),
@@ -54,7 +55,6 @@ define(['../validation'], function(validation) {
         var $email = $memberInput;
         if (validation.validateEmail($email.val())) {
             renderMember($email.val());
-            emails.push($email.val());
             $email.val('');
         } else {
             // TODO standardize validation
@@ -70,8 +70,18 @@ define(['../validation'], function(validation) {
         member.on('click', '.js-delete-icon', function(e) {
             var $label = $(e.target).parent().parent();
             $label.remove();
-            // TODO add removal from emails
         });
+    }
+
+    function collectEmails() {
+        var emails = [];
+        var members = $membersList.find('.label-email');
+        var membersLen = members.length;
+        for (var i = 0; i < membersLen; i++) {
+            var email = $(members[i]).text();
+            emails.push(email);
+        }
+        return emails;
     }
 
     function getRootElement() {
