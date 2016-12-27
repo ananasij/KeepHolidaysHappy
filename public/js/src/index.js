@@ -204,6 +204,13 @@ define([
         proposalCreated.init($('.js-proposal-created'), formData);
 
         stepSwitcher($('.js-steps'), steps);
+
+        $('.create-proposal').on('click', function() {
+            var target = $('.js-template-selection');
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        });
     }
 
 
