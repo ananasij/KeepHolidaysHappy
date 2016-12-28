@@ -64,18 +64,17 @@
 
                 <div class="proposal-container">
                     <div class="proposal">
-                        <textarea class="proposal-text js-proposal-textarea js-required" rows="11" data-name-for-validation="Proposal text">
+                        <textarea class="proposal-text js-proposal-textarea js-validate" data-validation-type="required"
+                                  rows="11">
                         </textarea>
+                        <p class="validation-message invisible js-validation-error"></p>
                     </div>
                 </div>
 
-                <button type="button" class="btn btn-default btn-lg submit-page js-submit-page" data-destination="js-answer-options-edit">
+                <button type="button" class="btn btn-default btn-lg submit-page js-submit-page"
+                        data-destination="js-answer-options-edit">
                     Select proposal
                 </button>
-
-                <div class="submit-validation-message-container">
-                    <p class="center-block invisible validation-message js-submit-validation-error"></p>
-                </div>
             </div>
 
 
@@ -157,8 +156,10 @@
                             <label class="control-label" for="senderName">Your name </label>
                         </div>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control js-required js-sender-name-input" id="senderName" autocomplete="name"
-                                   placeholder="That's how your proposal will be signed" data-name-for-validation="Your name">
+                            <input type="text" class="form-control js-sender-name-input js-validate"  id="senderName"
+                                   autocomplete="name" placeholder="That's how your proposal will be signed"
+                                   data-validation-type="required">
+                            <p class="validation-message invisible js-validation-error"></p>
                         </div>
                     </div>
                     <div class="row answer-option-input">
@@ -166,20 +167,20 @@
                             <label class="control-label" for="senderEmail">Your email </label>
                         </div>
                         <div class="col-sm-9 js-sender-email-input-container">
-                            <input type="email" class="form-control js-sender-email-input js-required" id="senderEmail"
+                            <input type="email" class="form-control js-sender-email-input js-validate" id="senderEmail"
                                    autocomplete="email" placeholder="Answers to the proposals will be sent here"
-                                   data-name-for-validation="Your email">
-                            <p class="validation-message invisible js-email-validation-error">Please enter a valid email address: email@example.com</p>
+                                   data-validation-type="required email">
+                            <p class="validation-message invisible js-validation-error"></p>
                         </div>
                     </div>
                     <h3>Send it to</h3>
                     <div class="row answer-option-input">
-                        <div class="members-list js-members-list"></div>
+                        <div class="members-list js-members-list js-validate" data-validation-type="requiredEmailsList"></div>
 
                         <div class="row">
                             <div class="col-sm-9 js-member-input-container">
-                                <input type="email" class="form-control js-member-input" >
-                                <p class="validation-message invisible js-email-validation-error">Please enter a valid email address: email@example.com</p>
+                                <input type="email" class="form-control js-member-input" data-validation-type="email">
+                                <p class="validation-message invisible js-validation-error"></p>
                             </div>
                             <div class="col-sm-3">
                                 <button type="button" class="btn btn-default btn-add js-add-member-btn" data-template="template-1">
@@ -198,9 +199,6 @@
                     Send emails
                 </button>
 
-                <div class="submit-validation-message-container">
-                    <p class="center-block invisible validation-message js-submit-validation-error"></p>
-                </div>
             </div>
 
 

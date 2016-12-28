@@ -1,4 +1,4 @@
-define(function() {
+define(['src/emailCollector'], function(emailCollector) {
     // eslint-disable-next-line no-useless-escape
     var emailValidator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -6,47 +6,56 @@ define(function() {
         return emailValidator.test(email);
     }
 
-    function checkEmptyFields(fields) {
-        var fieldsNumber = fields.length;
-        var emptyFields = [];
-        for (var i = 0; i < fieldsNumber; i++) {
-            var $field = $(fields[i]);
-            if (!$field.val().trim()) {
-                emptyFields.push($field.data('name-for-validation'));
+    function validateStepFields($step) {
+        var fieldsToValidate = $step.find('.js-validate');
+        var fieldsNum = fieldsToValidate.length;
+        var isValid = true;
+        for (var i = 0; i < fieldsNum; i++) {
+            if (!validateField($(fieldsToValidate[i]))) {
+                isValid = false;
             }
         }
-        if (emptyFields.length) {
-            return emptyFields;
-        }
-        return false;
+        return isValid;
     }
 
-    function getEmptyFieldsErrorMessage(fields) {
-        var message = 'Please fill the required fields in: ';
-        fields.forEach(function(field, position) {
-            if (position === 0) {
-                message += field;
-            } else {
-                message += ', ' + field;
+    function validateField($field) {
+        var validationType = $field.data('validation-type').split(' ');
+        var fieldValue = $field.val().trim();
+        var errorMessage = '';
+        var isValid = true;
+        if (validationType.includes('email')) {
+            if (!validateEmail(fieldValue)) {
+                errorMessage = 'Please enter a valid email';
+                isValid = false;
             }
-        });
-        return message;
+        }
+        if (validationType.includes('required')) {
+            if (!fieldValue) {
+                errorMessage = 'This field cannot be empty!';
+                isValid = false;
+            }
+        }
+        if (validationType.includes('requiredEmailsList')) {
+            var emails = emailCollector.collectEmails($field);
+            if (!emails.length) {
+                errorMessage = 'Please add emails!';
+                isValid = false;
+            }
+        }
+
+        if (!isValid) {
+            renderErrorMessage(errorMessage);
+        }
+        return isValid;
     }
 
-    function validateRequiredFields($step, $validationError) {
-        var requiredFields = $step.find('.js-required');
-        var emptyFields = checkEmptyFields(requiredFields);
-        $validationError.text('').addClass('invisible');
-        if (emptyFields) {
-            var errorMessage = getEmptyFieldsErrorMessage(emptyFields);
-            $validationError.text(errorMessage).removeClass('invisible');
-            return false;
-        }
-        return true;
+    function renderErrorMessage(message) {
+        console.log(message);
     }
 
     return {
         validateEmail: validateEmail,
-        validateRequiredFields: validateRequiredFields
+        validateStepFields: validateStepFields,
+        validateField: validateField
     };
-})
+});

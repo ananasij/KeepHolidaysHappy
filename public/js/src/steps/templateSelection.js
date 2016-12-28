@@ -4,13 +4,11 @@ define(['../proposals', '../validation'], function(proposals, validation) {
     var $rootElement;
     var $templateOptions;
     var $proposalText;
-    var $validationError;
 
     function init($root, sharedFormData) {
         $rootElement = $root;
         $templateOptions = $rootElement.find('.js-template-options');
         $proposalText = $rootElement.find('.js-proposal-textarea');
-        $validationError = $rootElement.find('.js-submit-validation-error');
 
         formData = sharedFormData;
 
@@ -28,7 +26,7 @@ define(['../proposals', '../validation'], function(proposals, validation) {
         });
 
         $rootElement.on('click', '.js-submit-page', function() {
-            if (!validation.validateRequiredFields($rootElement, $validationError)) {
+            if (!validation.validateStepFields($rootElement)) {
                 return;
             }
 
