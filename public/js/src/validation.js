@@ -43,14 +43,18 @@ define(['src/emailCollector'], function(emailCollector) {
             }
         }
 
-        if (!isValid) {
-            renderErrorMessage(errorMessage);
-        }
+        renderErrorMessage(errorMessage, $field);
         return isValid;
     }
 
-    function renderErrorMessage(message) {
-        console.log(message);
+    function renderErrorMessage(message, $field) {
+        var errorMessage = $($field.parent()).find('.js-validation-error');
+        errorMessage.text(message);
+        if (message) {
+            errorMessage.removeClass('invisible');
+        } else {
+            errorMessage.addClass('invisible');
+        }
     }
 
     return {

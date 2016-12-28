@@ -22,9 +22,6 @@ define(['../validation', '../emailCollector'], function(validation, emailCollect
         });
 
         $rootElement.on('keyup', '.js-member-input', function(e) {
-            // TODO standardize validation
-            // $('.js-member-input-container').find('.js-email-validation-error').addClass('invisible');
-
             if (e.keyCode === 13) {
                 addMember();
             }
